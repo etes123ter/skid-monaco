@@ -2578,46 +2578,39 @@ function setupAutosave() {
 
 			
 monaco.editor.defineTheme('net-theme-dark', {
-    base: 'vs-dark',
-    inherit: true,
-    colors: {
-        "editor.background": "transparent",  // Keep Monaco background transparent
-    },
-    rules: [
-        {
-            token: 'global',
-            foreground: '6699cc',  // Text color for global token
-            fontStyle: "bold"
-        },
-        {
-            token: 'keyword',
-            foreground: 'cc99cc',
-            fontStyle: "bold"
-        },
-        {
-            token: 'comment',
-            foreground: '999999'
-        },
-        {
-            token: 'number',
-            foreground: 'f99157'
-        },
-        {
-            token: 'string',
-            foreground: '99CC99'
-        },
-        {
-            token: 'Method',
-            foreground: 'ffa1dc'
-        },
-    ]
-});
-
-// Apply the theme after defining it
-monaco.editor.setTheme('net-theme-dark');
-
-// Optional: Make sure the editor container is transparent (forces container transparency)
-document.querySelector('.monaco-editor').style.backgroundColor = "transparent";  // Ensure container background is transparent
+				base: 'vs-dark',
+				inherit: true,
+				colors: {
+					"editor.background": '#141414', //ur background color
+				},
+				rules: [{
+						token: 'global',
+						foreground: '6699cc', // //FFFFFF
+						fontStyle: "bold"
+					},
+					{
+						token: 'keyword',
+						foreground: 'cc99cc',
+						fontStyle: "bold"
+					},
+					{
+						token: 'comment',
+						foreground: '999999'
+					},
+					{
+						token: 'number',
+						foreground: 'f99157'
+					},
+					{
+						token: 'string',
+						foreground: '99CC99'
+					},
+					{
+						token: 'Method',
+						foreground: 'ffa1dc'
+					},
+				]
+			});
 
 			editor = monaco.editor.create(document.getElementById('container'), {
 				language: 'lua',
